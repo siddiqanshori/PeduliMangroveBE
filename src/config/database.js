@@ -1,3 +1,18 @@
+// FREEDB.TECH
+
+const mysql = require('mysql2');
+
+const dbPool = mysql.createPool({
+    host: "sql.freedb.tech",
+    user: "freedb_mangrove",
+    password: "6dTF@r@UdnTguZq",
+    database: "freedb_mangrove",
+});
+
+module.exports = dbPool.promise();
+// ==================================================================================================
+// AWS CLOUD
+
 // const mysql = require('mysql2');
 
 // const dbPool = mysql.createPool({
@@ -9,19 +24,19 @@
 
 // module.exports = dbPool.promise();
 
+//==============================================================================
+ // LOKAL
 
-//=============== Lokal================================
+// const mysql = require('mysql2');
 
-const mysql = require('mysql2');
+// const dbPool = mysql.createPool({
+//     host: "localhost",
+//     user: "root",
+//     password: "",
+//     database: "mangrove",
+// });
 
-const dbPool = mysql.createPool({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "mangrove",
-});
-
-module.exports = dbPool.promise();
+// module.exports = dbPool.promise();
 
 
 // const {Pool} = require('pg');
